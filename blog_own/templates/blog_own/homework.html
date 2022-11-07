@@ -1,0 +1,45 @@
+{% extends "blog_own/father.html" %}
+{% load static %}
+
+{% block header %}
+    <h1 class="display-5 fw-bolder text-white mb-2">Homework</h1>
+    <p class="lead text-white-50 mb-4">Quickly access to your homework, appoinments and meetings</p>
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-outline-light btn-lg px-4" href="{% url 'start_blog' %}">Volver al hall</a>
+    </div>
+{% endblock %}
+
+{% block changed %}
+    <section class="bg-light py-5">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Homework adder</h2>
+                <p class="lead mb-0">Ingresa una nueva tarea en el siguiente formulario.</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+
+
+
+                    
+                    {% if form.errors %}
+                    <p class="mb-1"> Estan mal los datos, revisar </p>> 
+                    {% endif %}
+
+                    <form class="form-control" action="" method="POST"> {% csrf_token %}
+                    <!-- <div class="form-floating mb-3"> -->
+                    <table ALIGN="center">            
+                    {{form.as_table}}           
+                    </table>
+                    <!-- </div> -->
+                    <hr>
+                    <div class="d-grid"><button class="btn btn-primary" id="submitButton" type="submit">Submit</button></div>
+                    </form>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

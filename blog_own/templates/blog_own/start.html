@@ -1,0 +1,106 @@
+{% extends "blog_own/father.html" %}
+{% load static %}
+
+{% block header %}
+
+    <h1 class="display-5 fw-bolder text-white mb-2">Personal Notebook - Blog</h1>
+    <p class="lead text-white-50 mb-4">Quickly access to your homework, appoinments and meetings</p>
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Check my things</a>
+        <a class="btn btn-outline-light btn-lg px-4" href="#adder_head">Add to my things</a>
+    </div>
+
+    
+{% endblock %}
+
+
+
+
+{% block changed %}
+
+    <!-- Features section-->
+    <section class="py-5 border-bottom" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Homework">Homework</h2>
+                    <p> Día a dia se asigna nuevas tareas que muchas veces son dificiles de recordar. Es por eso que se hace necesario registrarlas. Ve seguro, registralo.</p>
+                    <a class="text-decoration-none" href="{% url 'search_homework' %}">
+                        Search for date
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Appointment">Appointment</h2>
+                    <p> Recordar cada uno de tus compromisos es necesario si quieres cumplir con todo y no faltar a tu palabra. Asiste a todos, registralo.</p>
+                    <a class="text-decoration-none" href="{% url 'search_appointment' %}">
+                        Search for date
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Meetings">Virtual meeting</h2>
+                    <p> Ver aquello que te importa desde la distancia nunca ha sido tan facil. No te lo pierdas.</p>
+                    <a class="text-decoration-none" href="{% url 'search_meeting' %}">
+                        Search for date
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-dark py-5" id="adder_head">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h2 class="h4 fw-bolder" style="color:white; text-align: center">Add to personal notebook - blog</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Features section-->
+    <section class="py-5 border-bottom">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Homework"> Add homework</h2>
+                    <p> Día a dia se asigna nuevas tareas que muchas veces son dificiles de recordar. Es por eso que se hace necesario registrarlas. Ve seguro, registralo.</p>
+                    <a class="text-decoration-none" href="{% url 'homework_add' %}">
+                        Add homework
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Appointment">Add appointment</h2>
+                    <p> Recordar cada uno de tus compromisos es necesario si quieres cumplir con todo y no faltar a tu palabra. Asiste a todos, registralo.</p>
+                    <a class="text-decoration-none" href="{% url 'appointment_add' %}">
+                        Add appointment
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="h4 fw-bolder" style="text-align: center" id="Meetings">Add virtual meeting</h2>
+                    <p> Ver aquello que te importa desde la distancia nunca ha sido tan facil. No te lo pierdas.</p>
+                    <a class="text-decoration-none" href="{% url 'meeting_add' %}">
+                        Add meetings
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

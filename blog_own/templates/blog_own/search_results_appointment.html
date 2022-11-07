@@ -1,0 +1,47 @@
+{% extends "blog_own/father.html" %}
+{% load static %}
+
+{% block header %}
+    <h1 class="display-5 fw-bolder text-white mb-2">Meetings</h1>
+    <p class="lead text-white-50 mb-4">Quickly access to your homework, appoinments and meetings</p>
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-outline-light btn-lg px-4" href="{% url 'start_blog' %}">Volver al hall</a>
+    </div>
+{% endblock %}
+
+{% block changed %}
+
+<section class="bg-light py-5">
+    <div class="container px-5 my-5 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Appointment searcher</h2>
+            <p class="lead mb-0">Search an appointment linked to a date:</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6" style="text-align:center">
+
+                {% if objects %}
+                <p> These are the appointments linked to the date: {{date}}</p>
+                
+            
+                <ul>
+                    {% for object in objects %}
+                        <p> -----------------------------------------</p>
+                        <li> Appointment's title: {{object.title}} </li>
+                        <li> Appointment's date: {{object.date}} </li>
+                        <li> Appointment's place: {{object.place}} </li>
+                        <p> -----------------------------------------</p>
+                    {% endfor %}
+                </ul>
+            
+                {% else %}
+                <p> Sorry, There is not information linked to that description.</p>
+                {% endif %}
+                
+
+            </div>
+        </div>
+    </div>
+</section>   
+
+{% endblock %}
