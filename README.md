@@ -6,7 +6,8 @@ El app principal llamada (web_own) donde se configuran las settings se dejo inta
 
 La pagina principal de la app adicional, permite navegar por formularios de agregacion y busqueda para cada uno de los modelos (Homework, appointment y Meetings), a travez de botones intuitivos.
 
-Adiconalmente, se tomo como criterio de busqueda para los modelos una fecha (la del objeto) que se asigno cuando se creo, todos los objetos de esa clase que tengan esa relacionada esa fecha se mostraran.
+Adicionalmente, para los modelos se tomo como criterio de busqueda una fecha (la del objeto, la cual que se asigno cuando se creo). Todos los objetos de esa clase que tengan esa fecha relacionada se mostraran en pantalla usando los botones de: Search for date.
+
 La forma de agregar la fecha en los Adders (los formularios de agregación) es así: yyyy-mm-dd.
 
 Para hacer los htmls se emplea herencia en los templates partiendo siempre del archivo father.html alojado en el directorio templates, de la app blog_own.
